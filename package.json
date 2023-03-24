@@ -4,15 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy",
+    "build:eleventy": "npx @11ty/eleventy",
+    "build:sass": "sass src/sass:_site/css",
+    "build:css": "postcss ./_site/css/styles.css --use autoprefixer --use cssnano --output ./_site/css/styles.min.css",
     "watch:eleventy": "npx @11ty/eleventy --serve",
     "watch:sass": "sass --watch src/sass:_site/css",
-    "start": "npm-run-all --parallel watch:*"
+    "start": "npm-run-all --parallel watch:*",
+    "build": "npm-run-all --parallel build:*"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^5.1.15",
     "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.1.0",
+    "postcss-preset-env": "^8.0.1",
     "sass": "^1.59.3"
   }
 }
