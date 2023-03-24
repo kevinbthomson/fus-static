@@ -74,6 +74,6 @@ main {
   margin-inline: auto;
 
   @media (min-width: $breakpoint-xl) {
-    width: min(1400px, 86vw);
+    width: min(1200px, 80ch);
   }
 }
