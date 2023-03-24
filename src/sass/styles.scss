@@ -1,0 +1,52 @@
+@import 'global';
+@import 'typography';
+@import 'icon-links';
+
+.hero {
+  align-content: center;
+  aspect-ratio: 1/1;
+  background-image: url('../img/fish_hat.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  width: 100%;
+
+  .fus-name {
+    padding-block-start: 10rem;
+    font-size: 33vw;
+    font-style: italic;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 0 2px 1rem rgb(0 0 0 / 0.5);
+    line-height: 0.875;
+
+    span {
+      display: block;
+      font-size: 0.25em;
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    height: 300px;
+
+    .fus-name {
+      font-size: 12rem;
+      padding-block-start: 0;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+nav[aria-label='Secondary'] {
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0;
+  }
+}
